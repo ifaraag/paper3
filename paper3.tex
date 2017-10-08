@@ -96,7 +96,7 @@
 	In the proposed access algorithm, it is assumed that the primary network consists of $N$ independent channels. Each primary user carries synchronous slot structure transmission. It is also assumed that each channel has a bandwidth $B_n (n=1,\dots \dots ,N)$.  In each slot, the state of each channel follows a discrete-time Markov process with two states denoted by "0" (occupied) or "1" (idle) as shown in Figure \ref{fig:pomdp}. The occupied state indicates that the channel is occupied by the PU. The idle state refers to the channel is free and can be used by the SUs \cite{Choi2011,Masrub2012,Zhao2007}. The channel state transition probabilities are $P_{01}$, $P_{10}$. $P_{01}$ represents a change in the channel state from occupied to idle, and $P_{10}$ stands for the transition state from idle to occupied. It's assumed that the state of the channel remains fixed for a block of time slots $T$ and is priory unknown to the SU. It is assumed that $P_{(1,n)}$ denotes the probability of channel $n$  $ \forall {n=1,\dots .,N}$ to be in the idle state.
 	\begin{figure}[h]
 				\centering
-				\includegraphics[width=0.7\columnwidth]{./pomdp.jpg}
+				\includegraphics[width=0.6\columnwidth]{./pomdp.jpg}
 				\caption{Markov channel model}
 				\label{fig:pomdp}
 			\end{figure}
@@ -187,23 +187,18 @@
 	
 	
 	
-	\section{Simulation Results}
-	In this section, the simulation results of the proposed access algorithm is discussed and compared to the Decentralized Cognitive MAC protocol (DCMAC)\cite{Zhao2007} and the random access algorithm in\cite{Lan2012}. In order to simplify the simulation, it's assumed that each channel has one pair of primary users, and operates on that particular channel and the channel bandwidth is 1 unit. Also we assume that ${M}_{1}$=${M}_{2}$=1. The simulation is done for 100 time slots with each part simulated 10000 times. Unless otherwise stated sensing errors are negligible.
-	
-	
-	
 	\section{Results}
 In this section simulation results are presented to evaluate the performance of our proposed scheme with sensing errors. At the beginning of each time slot, Sus take M number of channel samples to sense with the same value of SNR. Collision to PUs occurs when Sus senses an occupied channel as idle.
 Figure \ref{fig:fig1err} shows the throughput of Sus at different SNR values (0dB, 1dB and 2dB) as a function of probability of collision. The number of channels is set to N=3, number of samples take M=5, total time slots T= 30 and channel transition probabilities$ P_ {01} = 0.3 $ and $P_{11}=0.5$. As described in the figure the throughput of Sus improves as the probability of collision increases. As the portability of collision is defined as the probability of allowed collisions to occur between the SUs and PUs it will have an impact on the throughput achieved by the SUs and also on the portability of false alarm which is shown in figure \ref{fig:fig2err}. Increasing the probability of collision decreases the chances that a Sus will sense a channel to be occupied while in fact it's free and hence decreasing the false alarm probability and improving the throughput performance. on the other hand, when collision probability is at lower values, the false detection is high and thus degrading the throughput performance.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\linewidth]{./fig1_err}
+	\includegraphics[width=0.7\linewidth]{./fig1_err}
 	\caption{Throughput performance at different SNR values as a function of collision probability}
 	\label{fig:fig1err}
 \end{figure}
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.5\linewidth]{./fig2_err}
+		\includegraphics[width=0.7\linewidth]{./fig2_err}
 		\caption{ROC curve between probability of missed detection and false alarm probability at different values of SNR }
 		\label{fig:fig2err}
 	\end{figure}
@@ -212,23 +207,15 @@ Figure \ref{fig:fig1err} shows the throughput of Sus at different SNR values (0d
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\linewidth]{./fig7_err}
+	\includegraphics[width=0.7\linewidth]{./fig7_err}
 	\caption{spectrum utilization efficiency as a function of collision probability}
 	\label{fig:fig7err}
 \end{figure}
 	
-%	the performance of multiple SUs with random massage arrival rate is studied in figure 6.It's assumed that the massage arrival for the SUs is a Poisson process with rate $\lambda $ and the length of the massage is determined by a geometric distribution with average of 50 packets and it takes one time slot to transmit one packet .In each time slot SUs who have no packets to transmit will go into sleep mode and will not participate in channel sensing and selection, the belief vector for these users is updated according to (12). Users who have packets to transmit will select channels according the greedy approach and update their belief vector according to the sensing outcome when more than one user selects the same channel; only one is chosen at random to transmit at that time slot. Figure 6 normalized throughput as a function of the message arrival rate $\lambda$ is shown for 5 SUs and N=3 . It's clear that as the rate of packet arrival increases the throughput of the SUs increases.
 	
 	
 	
-%	
-%	\begin{figure}[h]
-%		\centering{\includegraphics[width=85mm]{fig_error}}
-%		\caption{Performance in the presence of imperfect sensing}
-%		\label{fig4}
-%	\end{figure}
-	%\noindent J. Smith and A. N. Other %(\textit{The IET, Stevenage, UK})
-	%\vskip3pt
+
 	
 	%\noindent E-mail: jsmith@theiet.org
 	\bibliographystyle{IEEEtran}
